@@ -1,0 +1,123 @@
+:root {
+    --primary: #3B3B1A;
+    --primary-light: #AEC8A4;
+    --primary-dark: #8A784E;
+    --bg-light: #E7EFC7;
+    --bg-dark: #3B3B1A;
+    --text-light: #3B3B1A;
+    --text-dark: #E7EFC7;
+    --accent: #8A784E;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--text-dark);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.banner {
+    background: var(--primary-light);
+    color: var(--primary);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+body.dark .banner {
+    background: var(--primary-dark);
+    color: var(--bg-light);
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: var(--primary);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #1f1f1f;
+}
+
+nav ul li a.dark-mode {
+    color: #ffffff;
+}
+
+.banner.dark-mode {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
