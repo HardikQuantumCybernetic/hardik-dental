@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# ="======================================="
+# NODE_ENV="production"
+# VITE_ANALYTICS_ID="your_analytics_id"
+# VITE_SENTRY_DSN="your_sentry_dsn"
+CLERK_SECRET_KEY="sk_test_Bb6gNfpOzHEEDQT2srSibaGQbiJYkO7zOE3y5EjCJL"
+DATABASE_URL="postgresql://postgres:hard30hardik@db.cpjnbhlplupqwapddykq.supabase.co:5432/postgres"
+NODE_ENV="development"
+VITE_APP_NAME="SmileCare Dental"
+VITE_APP_URL="http://localhost:8080"
+VITE_CLERK_PUBLISHABLE_KEY="pk_test_YWJsZS1sbGFtYS01MC5jbGVyay5hY2NvdW50cy5kZXYk"
+VITE_DEV_MODE="true"
+VITE_SITE_URL="http://localhost:8080"
+VITE_SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwam5iaGxwbHVwcXdhcGRkeWtxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQwOTM2MDUsImV4cCI6MjA2OTY2OTYwNX0.za1nKxSI58PiRP6o6X7pCEjJSCltgFXk5LRchwsrZPI"
+VITE_SUPABASE_PROJECT_ID="mmsmljkeedqfrbgsqipf"
+VITE_SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1tc21samtlZWRxZnJiZ3NxaXBmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2Mzg4OTAsImV4cCI6MjA3MDIxNDg5MH0.VFc1vLtZgRBlbWa6UA2DTvdag-0sSKVfxpqIQJKwLlg"
+VITE_SUPABASE_URL="https://mmsmljkeedqfrbgsqipf.supabase.co"
+GEMINI_API_KEY="AIzaSyAVJqAIUSkhgBGNHSn28EF9L1apoQbYjnM"

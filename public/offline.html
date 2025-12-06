@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - DentalCare Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, hsl(217, 91%, 95%), white, hsl(170, 76%, 95%));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: hsl(222, 84%, 5%);
+        }
+        
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 500px;
+        }
+        
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(170, 76%, 45%));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: hsl(217, 91%, 60%);
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: hsl(215, 16%, 47%);
+        }
+        
+        .retry-btn {
+            background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(170, 76%, 45%));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-right: 1rem;
+        }
+        
+        .retry-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .home-btn {
+            background: transparent;
+            color: hsl(217, 91%, 60%);
+            border: 2px solid hsl(217, 91%, 60%);
+            padding: 10px 22px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .home-btn:hover {
+            background: hsl(217, 91%, 60%);
+            color: white;
+        }
+        
+        .features {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 1rem;
+            color: hsl(170, 76%, 45%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">📱</div>
+        
+        <h1>You're Offline</h1>
+        
+        <p>
+            Don't worry! DentalCare Pro works offline. You can still browse 
+            cached content and your data will sync when you're back online.
+        </p>
+        
+        <button class="retry-btn" onclick="window.location.reload()">
+            Try Again
+        </button>
+        
+        <a href="/" class="home-btn">
+            Go Home
+        </a>
+        
+        <div class="features">
+            <h3 style="margin-bottom: 1rem; color: hsl(217, 91%, 60%);">Available Offline:</h3>
+            
+            <div class="feature">
+                <div class="feature-icon">📅</div>
+                <div>
+                    <strong>View Appointments</strong><br>
+                    <small>Browse your cached appointment history</small>
+                </div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">👤</div>
+                <div>
+                    <strong>Patient Information</strong><br>
+                    <small>Access your saved patient details</small>
+                </div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📞</div>
+                <div>
+                    <strong>Contact Info</strong><br>
+                    <small>Get our office phone and address</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Retry connection periodically
+        function checkConnection() {
+            if (navigator.onLine) {
+                window.location.reload();
+            }
+        }
+        
+        // Check every 30 seconds
+        setInterval(checkConnection, 30000);
+        
+        // Also check when online event fires
+        window.addEventListener('online', () => {
+            setTimeout(() => window.location.reload(), 1000);
+        });
+    </script>
+</body>
+</html>
