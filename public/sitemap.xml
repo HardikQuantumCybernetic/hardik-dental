@@ -31,3 +31,39 @@
     <priority>0.9</priority>
   </url>
 </urlset>
+
+<!--
+This is an **XML sitemap** - a file that helps search engines like Google understand and navigate your website.
+Let me break down what each part means:
+
+## Overall Structure
+The sitemap lists all the important pages on the hardikdental.com website, making it easier for search engines to find and index them.
+
+## Each URL Entry Contains:
+
+**`<loc>` (Location)**: The actual web address of the page
+- Example: `https://hardikdental.com/services`
+
+**`<lastmod>` (Last Modified)**: When the page was last updated
+- All pages show January 21, 2024
+- This helps search engines know if content is fresh
+
+**`<changefreq>` (Change Frequency)**: How often the page typically updates
+- "weekly" - for pages that change often (homepage, services, booking)
+- "monthly" - for pages that change less (about, contact)
+
+**`<priority>` (Priority)**: How important this page is relative to others on your site (scale of 0.0 to 1.0)
+- 1.0 = Homepage (most important)
+- 0.9 = Services and Booking (very important)
+- 0.8 = About and Contact (important, but less so)
+
+## The Pages Listed:
+1. **Homepage** - highest priority
+2. **Services** - what treatments you offer
+3. **About** - information about the practice
+4. **Contact** - how to reach you
+5. **Booking** - appointment scheduling
+
+This sitemap would typically be submitted to Google Search Console to help your dental practice website appear in
+search results more effectively.
+-->
