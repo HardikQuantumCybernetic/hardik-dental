@@ -48,7 +48,7 @@ const ReportsAnalytics = () => {
   ];
 
   const quickStats = [
-    { label: "This Month", value: "$34,560", change: "+12.5%", positive: true },
+    { label: "This Month", value: "₹34,560", change: "+12.5%", positive: true },
     { label: "New Patients", value: "47", change: "+8.2%", positive: true },
     { label: "Appointments", value: "234", change: "-2.1%", positive: false },
     { label: "Revenue Growth", value: "18.4%", change: "+3.2%", positive: true }
