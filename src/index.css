@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dental Booking Design System - Professional Medical Theme */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    /* Professional dental blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 217 91% 95%;
+
+    /* Clean medical grays */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Dental accent - soft mint */
+    --accent: 170 76% 95%;
+    --accent-foreground: 170 76% 20%;
+
+    /* Trust colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Dental-specific design tokens */
+    --dental-blue: 217 91% 60%;
+    --dental-blue-light: 217 91% 95%;
+    --dental-mint: 170 76% 45%;
+    --dental-mint-light: 170 76% 95%;
+    --dental-gray: 215 16% 47%;
+    --dental-gray-light: 210 20% 96%;
+
+    /* Professional gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(170 76% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(217 91% 98%));
+    --gradient-interactive: linear-gradient(45deg, hsl(217 91% 60%), hsl(170 76% 45%), hsl(217 91% 60%));
+    --gradient-glow: radial-gradient(circle at center, hsl(217 91% 60% / 0.3), transparent);
+    --gradient-background: linear-gradient(180deg, hsl(217 91% 98%), hsl(170 76% 98%));
+
+    /* Professional shadows */
+    --shadow-card: 0 4px 6px -1px hsl(217 91% 60% / 0.1), 0 2px 4px -1px hsl(217 91% 60% / 0.06);
+    --shadow-button: 0 4px 14px 0 hsl(217 91% 60% / 0.25);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+    --shadow-interactive: 0 8px 25px -5px hsl(217 91% 60% / 0.4);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Color-changing effects */
+  .gradient-interactive {
+    background: var(--gradient-interactive);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .glow-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow-effect::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--gradient-glow);
+    opacity: 0;
+    transition: var(--transition-glow);
+    z-index: -1;
+  }
+
+  .glow-effect:hover::before {
+    opacity: 1;
+  }
+
+  .color-shift {
+    transition: var(--transition-smooth);
+  }
+
+  .color-shift:hover {
+    filter: hue-rotate(15deg) brightness(1.1);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .floating-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Background animations */
+  .animated-bg {
+    background: var(--gradient-background);
+    background-size: 400% 400%;
+    animation: gradient-bg 8s ease infinite;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--dental-blue) / 0.4);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(var(--dental-mint) / 0.6);
+  }
+}
+
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

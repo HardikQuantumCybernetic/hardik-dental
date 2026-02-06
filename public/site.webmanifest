@@ -1,0 +1,95 @@
+{
+  "name": "DentalCare Pro - Professional Dental Services",
+  "short_name": "DentalCare Pro",
+  "description": "Professional dental care with modern technology and compassionate service. Book appointments, manage your dental health, and access your records.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4F8BF7",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["health", "medical", "lifestyle"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "DentalCare Pro Dashboard"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Book Appointment"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book",
+      "description": "Quickly book a dental appointment",
+      "url": "/booking",
+      "icons": [
+        {
+          "src": "/icon-calendar.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Patient Dashboard",
+      "short_name": "Dashboard",
+      "description": "Access your patient dashboard",
+      "url": "/patient-dashboard",
+      "icons": [
+        {
+          "src": "/icon-dashboard.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our office",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-contact.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
