@@ -1,5 +1,0 @@
-project_id = "mmsmljkeedqfrbgsqipf"
-
-[functions.chat-with-gemini]
-# Allow public access - rate limiting is handled in the function itself
-verify_jwt = false
